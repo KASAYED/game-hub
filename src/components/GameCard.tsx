@@ -6,12 +6,11 @@ import getCroppedImgUrl from './../services/getCroppedImgUrl';
 
 interface Props {
 	game: Game;
-	getCroppedImgUrl: () => void;
 }
 
 function GameCard({ game }: Props) {
 	return (
-		<Card borderRadius="10px" overflow="hidden">
+		<Card width='300px' borderRadius="10px" overflow="hidden">
 			<Image src={getCroppedImgUrl(game.background_image)} />
 			<CardBody>
 				<Heading fontSize="2xl" marginY={2}>
