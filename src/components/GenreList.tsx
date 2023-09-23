@@ -18,6 +18,8 @@ interface Props {
 
 const GenreList = () => {
 	const { data, isLoading, error } = useGenres();
+	if (error) return null;
+	if (isLoading) return <Spinner />;
 
 	return (
 		<>
@@ -31,7 +33,7 @@ const GenreList = () => {
 								objectFit="cover"
 								src={getCroppedImageUrl(genre.image_background)}
 							/>
-							<Text fontSize='lg'>{genre.name}</Text>
+							<Text fontSize="lg">{genre.name}</Text>
 						</HStack>
 					</ListItem>
 				))}
