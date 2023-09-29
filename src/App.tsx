@@ -1,4 +1,12 @@
-import { Grid, GridItem, Show, HStack, Flex, Box, Heading } from '@chakra-ui/react';
+import {
+	Grid,
+	GridItem,
+	Show,
+	HStack,
+	Flex,
+	Box,
+	Heading,
+} from '@chakra-ui/react';
 import { Genre } from './hooks/useGenres';
 import Navbar from './components/Navbar';
 import GameGrid from './components/GameGrid';
@@ -42,7 +50,7 @@ function App() {
 			</Show>
 			<GridItem area="main">
 				<Box paddingLeft={2}>
-					<GameHeading gameQuery={gameQuery}/>
+					<GameHeading gameQuery={gameQuery} />
 					<Flex marginBottom={5}>
 						<Box marginRight={5}>
 							{' '}
